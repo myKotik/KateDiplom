@@ -2,7 +2,6 @@ package com.example.onbording;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.example.onbording.Adapter.IntroViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class IntroActivity extends AppCompatActivity {
 
 
         if (restorePrefData()){
-            Intent a = new Intent(getApplicationContext(), MainActivity.class);
+            Intent a = new Intent(getApplicationContext(), Registration.class);
             startActivity(a);
             finish();
         }
@@ -52,9 +52,9 @@ public class IntroActivity extends AppCompatActivity {
 
         // fill screen list
         List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Анализы", "Экспресс сбор и получение проб", R.drawable.pic1));
-        mList.add(new ScreenItem("Уведомление", "Экспресс сбор и получение проб", R.drawable.pic2));
-        mList.add(new ScreenItem("Мониторинг", "Экспресс сбор и получение проб", R.drawable.pic3));
+        mList.add(new ScreenItem("Вкуснота", "Попробовав наш продукт вы останетесь полностью удовлетворены", R.drawable.pic1));
+        mList.add(new ScreenItem("Цены", "У нас приятные цены и они подойдут всем кто хочет попробовать наш продукт", R.drawable.pic2));
+        mList.add(new ScreenItem("Атмосфера", " У нас приятная атмосфера в заведении которая вам очень понравится", R.drawable.sofa));
 
         //setup viewpager
         screenPager = findViewById(R.id.viewPager2);
@@ -104,7 +104,7 @@ public class IntroActivity extends AppCompatActivity {
          btnGetStarted.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                 Intent i = new Intent(getApplicationContext(), Registration.class);
                  startActivity(i);
                  savePrefsData();
                  finish();

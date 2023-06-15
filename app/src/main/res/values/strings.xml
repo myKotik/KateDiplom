@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">OnBording</string>
+    <string name="app_name">KFood</string>
     <string name="wednesday">wednesday</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

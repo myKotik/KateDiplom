@@ -20,12 +20,14 @@
         android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="Дальше"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:drawableEnd ="@drawable/ic_baseline_arrow_forward_24"
-        android:drawableTint ="@color/gradient_start_color"
-        android:textColor ="@color/gradient_start_color"
+        android:drawableTint ="@color/black"
+        android:textColor ="@color/black"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
         />
 
     <com.google.android.material.tabs.TabLayout
@@ -35,7 +37,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/btn_next"
         app:layout_constraintStart_toStartOf="parent"
-        app:tabBackground="@drawable/indicator_selector">
+        app:tabBackground="@drawable/indicator_selector"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        >
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -44,9 +49,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
-        android:text="Get Started"
+        android:text="Войти"
         android:visibility="invisible"
-        android:textColor ="@color/gradient_start_color"
+        android:textColor ="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
